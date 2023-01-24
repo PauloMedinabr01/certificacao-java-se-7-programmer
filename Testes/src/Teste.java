@@ -1,14 +1,15 @@
 /*
- * A variável x declarada como parâmetro do método main efetua um shadowing. 
- * Nesse instante, ao dizermos x = 200, tentamos atribuir um int a um array de String, 
- * erro de compilação.
+ * Compila e imprime os números de 10 até 99. Isso porque o acesso à variável estática pode 
+ * ser feito através da instância da classe ou diretamente caso seja uma variável estática 
+ * sendo acessada por um método estático.
  */
 
 class Teste {
-    static int x = 15;
+    static int i = 3;
 
-    public static void main(String[] x) {
-        x = 200;
-        System.out.println(x);
+    public static void main(String[] a) {
+        for (new Teste().i = 10; new Teste().i < 100; new Teste().i++) {
+            System.out.println(i);
+        }
     }
 }
