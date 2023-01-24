@@ -1,15 +1,14 @@
 /*
- * A resposta correta é: Compila e roda, imprimindo de 0 até 19 e depois 15. Repare que a
- * variável i declarada no for, só é visível dentro do for, por isso podemos declará-la 
- * novamente logo em seguida.
+ * A variável x declarada como parâmetro do método main efetua um shadowing. 
+ * Nesse instante, ao dizermos x = 200, tentamos atribuir um int a um array de String, 
+ * erro de compilação.
  */
 
 class Teste {
-    public static void main(String[] args) {
-        for (int i = 0; i < 20; i++) {
-            System.out.println(i);
-        }
-        int i = 15;
-        System.out.println(i);
+    static int x = 15;
+
+    public static void main(String[] x) {
+        x = 200;
+        System.out.println(x);
     }
 }
